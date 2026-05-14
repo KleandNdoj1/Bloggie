@@ -1,7 +1,7 @@
 ﻿using Bloggie.Web.Models.Domain;
 using Bloggie.Web.Models.ViewModels;
 using Bloggie.Web.Repositories;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bloggie.Web.Controllers
@@ -18,7 +18,8 @@ namespace Bloggie.Web.Controllers
         }
         [HttpPost]
         [Route("Add")]
-       public async Task<IActionResult> AddLike([FromBody]AddLikeRequest addLikeRequest)
+        [Authorize]
+        public async Task<IActionResult> AddLike([FromBody] AddLikeRequest addLikeRequest)
        {
             var model = new BlogPostLike
             {

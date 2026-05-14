@@ -56,7 +56,7 @@ namespace Bloggie.Web.Repositories
             {
                 existingBlog.Id = blogPost.Id;
                 existingBlog.Heading = blogPost.Heading;
-                existingBlog.PageTittle = blogPost.PageTittle;
+                existingBlog.PageTitle = blogPost.PageTitle;
                 existingBlog.Content = blogPost.Content;
                 existingBlog.ShortDescription = blogPost.ShortDescription;
                 existingBlog.Author = blogPost.Author;

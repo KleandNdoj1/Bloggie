@@ -16,10 +16,7 @@ namespace Bloggie.Web.Controllers
         {
             this.tagRepository = tagRepository;
             this.blogPostRepository = blogPostRepository;
-            }
-
-        public ITagRepository TagRepository { get; }
-        public IBlogPostRepository BlogPostRepository { get; }
+        }
 
         [HttpGet]
         public async Task<IActionResult> Add()
@@ -42,7 +39,7 @@ namespace Bloggie.Web.Controllers
             var blogPostDomain = new BlogPost
             {
                 Heading = addBlogPostRequest.Heading,
-                PageTittle = addBlogPostRequest.PageTittle,
+                PageTitle = addBlogPostRequest.PageTitle,
                 Content = addBlogPostRequest.Content,
                 ShortDescription = addBlogPostRequest.ShortDescription,
                 FeaturedImageUrl = addBlogPostRequest.FeaturedImageUrl,
@@ -95,7 +92,7 @@ namespace Bloggie.Web.Controllers
                 {
                     Id = blogPost.Id,
                     Heading = blogPost.Heading,
-                    PageTittle = blogPost.PageTittle,
+                    PageTitle = blogPost.PageTitle,
                     Content = blogPost.Content,
                     Author = blogPost.Author,
                     FeaturedImageUrl = blogPost.FeaturedImageUrl,
@@ -124,7 +121,7 @@ namespace Bloggie.Web.Controllers
             {
                 Id = editBlogPostRequest.Id,
                 Heading = editBlogPostRequest.Heading,
-                PageTittle = editBlogPostRequest.PageTittle,
+                PageTitle = editBlogPostRequest.PageTitle,
                 Content = editBlogPostRequest.Content,
                 Author = editBlogPostRequest.Author,
                 ShortDescription = editBlogPostRequest.ShortDescription,

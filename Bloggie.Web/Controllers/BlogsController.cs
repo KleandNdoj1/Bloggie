@@ -3,10 +3,6 @@ using Bloggie.Web.Models.ViewModels;
 using Bloggie.Web.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Bloggie.Web.Controllers
 {
@@ -79,7 +75,7 @@ namespace Bloggie.Web.Controllers
                 {
                     Id = blogPost.Id,
                     Content = blogPost.Content,
-                    PageTitle = blogPost.PageTittle,
+                    PageTitle = blogPost.PageTitle,
                     Author = blogPost.Author,
                     FeaturedImageUrl = blogPost.FeaturedImageUrl,
                     Heading = blogPost.Heading,

@@ -1,11 +1,14 @@
-﻿namespace Bloggie.Web.Models.Domain
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Bloggie.Web.Models.Domain
 {
     public class BlogPost
     {
 
         public Guid Id { get; set; }
         public string Heading { get; set; }
-        public string PageTittle { get; set; }
+        [Column("PageTittle")] // legacy column name in DB — rename via migration when convenient
+        public string PageTitle { get; set; }
         public string Content { get; set; }
         public string ShortDescription { get; set; }
         public string FeaturedImageUrl { get; set; }
